@@ -1,0 +1,6 @@
+xmlschema (1.0.15-1) UNRELEASED; urgency=low
+
+  * Initial release. Closes: #nnnn
+    <nnnn is the bug number of your ITP>
+
+ -- Guillaume J Humbert <guillaume.j.humbert@pm.me>  Tue, 29 Oct 2019 19:21:39 +0800
