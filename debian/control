@@ -5,7 +5,7 @@ Maintainer: Guillaume J Humbert <guillaume.j.humbert@pm.me>
 Build-Depends: debhelper (>=11), dh-python, python3-all, python3-setuptools
 Standards-Version: 4.1.4
 Homepage: <insert the upstream URL, if relevant>
-X-Python3-Version: >= 3.2
+X-Python3-Version: >= 3.6
 
 Package: xmlschema
 Architecture: all
