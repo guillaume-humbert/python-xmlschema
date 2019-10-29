@@ -1,6 +1,5 @@
-xmlschema (1.0.15-1) UNRELEASED; urgency=low
+xmlschema (1.0.15-1~ubuntu1) bionic; urgency=low
 
-  * Initial release. Closes: #nnnn
-    <nnnn is the bug number of your ITP>
+  * Initial release.
 
  -- Guillaume J Humbert <guillaume.j.humbert@pm.me>  Tue, 29 Oct 2019 19:21:39 +0800
