@@ -8,7 +8,7 @@ License: MIT
 
 Files: debian/*
 Copyright: (c) 2019 Guillaume J Humbert <guillaume.j.humbert@pm.me>
-License: Expat
+License: MIT
 
 License: MIT
  Permission is hereby granted, free of charge, to any person obtaining a copy
