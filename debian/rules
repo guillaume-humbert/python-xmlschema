@@ -4,3 +4,15 @@
 
 %:
 	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_test:
+	cd .pybuild/cpython3*/build; \
+	PYTHONPATH=. python3 xmlschema/tests/test_all.py; \
+	PYTHONPATH=. python3 xmlschema/tests/test_package.py; \
+	PYTHONPATH=. python3 xmlschema/tests/test_memory.py; \
+	rm -Rf xmlschema/tests
+
+override_dh_auto_install:
+	dh_auto_install
+	rm -Rf debian/python3-xmlschema/usr/lib/python3*/dist-packages/xmlschema/tests
+	cp xmlschema/unicode_categories.json debian/python3-xmlschema/usr/lib/python3*/dist-packages/xmlschema/
