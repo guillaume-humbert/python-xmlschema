@@ -2,7 +2,7 @@ Source: xmlschema
 Section: python
 Priority: optional
 Maintainer: Guillaume J Humbert <guillaume.j.humbert@pm.me>
-Build-Depends: debhelper (>=11), dh-python, python3-all, python3-setuptools
+Build-Depends: debhelper (>=11), dh-python, python3-all, python3-setuptools, python3-elementpath, python3-memory-profiler
 Standards-Version: 4.1.4
 Homepage: https://github.com/sissaschool/xmlschema
 X-Python3-Version: >= 3.6
