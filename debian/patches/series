@@ -1,1 +1,2 @@
-# You must remove unused comment lines for the released package.
+0001-Use-Current-Python-Executable-In-Tests.patch
+0002-Fix-Elementpath-Version.patch

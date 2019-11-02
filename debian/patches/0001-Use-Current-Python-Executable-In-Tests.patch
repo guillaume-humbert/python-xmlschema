@@ -1,0 +1,81 @@
+diff --git a/xmlschema/tests/test_etree.py b/xmlschema/tests/test_etree.py
+index e039181..3714ae3 100644
+--- a/xmlschema/tests/test_etree.py
++++ b/xmlschema/tests/test_etree.py
+@@ -54,7 +54,7 @@ class TestElementTree(unittest.TestCase):
+     def test_element_tree_import_script(self):
+         test_dir = os.path.dirname(__file__) or '.'
+ 
+-        cmd = [os.path.join(test_dir, 'check_etree_import.py')]
++        cmd = [sys.executable, os.path.join(test_dir, 'check_etree_import.py')]
+         process = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+         output = process.stdout.decode('utf-8')
+         self.assertTrue("\nTest OK:" in output, msg="Wrong import of ElementTree after xmlschema")
+diff --git a/xmlschema/tests/test_memory.py b/xmlschema/tests/test_memory.py
+index 69912cf..4994bec 100644
+--- a/xmlschema/tests/test_memory.py
++++ b/xmlschema/tests/test_memory.py
+@@ -13,6 +13,7 @@ import unittest
+ import os
+ import decimal
+ import subprocess
++import sys
+ 
+ 
+ class TestMemoryUsage(unittest.TestCase):
+@@ -38,7 +39,7 @@ class TestMemoryUsage(unittest.TestCase):
+     @unittest.skip
+     def test_package_memory_usage(self):
+         test_dir = os.path.dirname(__file__) or '.'
+-        cmd = [os.path.join(test_dir, 'check_memory.py'), '1']
++        cmd = [sys.executable, os.path.join(test_dir, 'check_memory.py'), '1']
+         output = subprocess.check_output(cmd, universal_newlines=True)
+         package_mem = self.check_memory_profile(output)
+         self.assertLess(package_mem, 20)
+@@ -49,15 +50,15 @@ class TestMemoryUsage(unittest.TestCase):
+             os.path.dirname(os.path.abspath(test_dir)), 'validators/schemas/XSD_1.0/XMLSchema.xsd'
+         )
+ 
+-        cmd = [os.path.join(test_dir, 'check_memory.py'), '2', xsd10_schema_file]
++        cmd = [sys.executable, os.path.join(test_dir, 'check_memory.py'), '2', xsd10_schema_file]
+         output = subprocess.check_output(cmd, universal_newlines=True)
+         parse_mem = self.check_memory_profile(output)
+ 
+-        cmd = [os.path.join(test_dir, 'check_memory.py'), '3', xsd10_schema_file]
++        cmd = [sys.executable, os.path.join(test_dir, 'check_memory.py'), '3', xsd10_schema_file]
+         output = subprocess.check_output(cmd, universal_newlines=True)
+         iterparse_mem = self.check_memory_profile(output)
+ 
+-        cmd = [os.path.join(test_dir, 'check_memory.py'), '4', xsd10_schema_file]
++        cmd = [sys.executable, os.path.join(test_dir, 'check_memory.py'), '4', xsd10_schema_file]
+         output = subprocess.check_output(cmd, universal_newlines=True)
+         lazy_iterparse_mem = self.check_memory_profile(output)
+ 
+@@ -71,11 +72,11 @@ class TestMemoryUsage(unittest.TestCase):
+             os.path.dirname(os.path.abspath(test_dir)), 'validators/schemas/XSD_1.0/XMLSchema.xsd'
+         )
+ 
+-        cmd = [os.path.join(test_dir, 'check_memory.py'), '5', xsd10_schema_file]
++        cmd = [sys.executable, os.path.join(test_dir, 'check_memory.py'), '5', xsd10_schema_file]
+         output = subprocess.check_output(cmd, universal_newlines=True)
+         decode_mem = self.check_memory_profile(output)
+ 
+-        cmd = [os.path.join(test_dir, 'check_memory.py'), '6', xsd10_schema_file]
++        cmd = [sys.executable, os.path.join(test_dir, 'check_memory.py'), '6', xsd10_schema_file]
+         output = subprocess.check_output(cmd, universal_newlines=True)
+         lazy_decode_mem = self.check_memory_profile(output)
+ 
+@@ -88,11 +89,11 @@ class TestMemoryUsage(unittest.TestCase):
+             os.path.dirname(os.path.abspath(test_dir)), 'validators/schemas/XSD_1.0/XMLSchema.xsd'
+         )
+ 
+-        cmd = [os.path.join(test_dir, 'check_memory.py'), '7', xsd10_schema_file]
++        cmd = [sys.executable, os.path.join(test_dir, 'check_memory.py'), '7', xsd10_schema_file]
+         output = subprocess.check_output(cmd, universal_newlines=True)
+         validate_mem = self.check_memory_profile(output)
+ 
+-        cmd = [os.path.join(test_dir, 'check_memory.py'), '8', xsd10_schema_file]
++        cmd = [sys.executable, os.path.join(test_dir, 'check_memory.py'), '8', xsd10_schema_file]
+         output = subprocess.check_output(cmd, universal_newlines=True)
+         lazy_validate_mem = self.check_memory_profile(output)
+ 
