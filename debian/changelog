@@ -1,3 +1,9 @@
+xmlschema (1.0.16-1~ubuntu1) bionic; urgency=medium
+
+  * New upstream version 1.0.16
+
+ -- Guillaume J Humbert <guillaume.j.humbert@pm.me>  Sun, 08 Dec 2019 17:02:59 +0800
+
 xmlschema (1.0.15-1~ubuntu1) bionic; urgency=low
 
   * Initial release.
