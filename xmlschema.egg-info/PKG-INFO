@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: xmlschema
-Version: 1.0.15
+Version: 1.0.16
 Summary: An XML Schema validator and decoder
 Home-page: https://github.com/brunato/xmlschema
 Author: Davide Brunato
@@ -169,5 +169,6 @@ Classifier: Programming Language :: Python :: 2.7
 Classifier: Programming Language :: Python :: 3.5
 Classifier: Programming Language :: Python :: 3.6
 Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
 Classifier: Programming Language :: Python :: Implementation :: CPython
 Classifier: Topic :: Software Development :: Libraries

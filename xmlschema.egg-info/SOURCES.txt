@@ -23,6 +23,7 @@ xmlschema/documents.py
 xmlschema/etree.py
 xmlschema/exceptions.py
 xmlschema/helpers.py
+xmlschema/limits.py
 xmlschema/namespaces.py
 xmlschema/qnames.py
 xmlschema/regex.py
@@ -109,6 +110,10 @@ xmlschema/tests/test_cases/features/namespaces/default_ns_valid2.xsd
 xmlschema/tests/test_cases/features/namespaces/import-case1.xsd
 xmlschema/tests/test_cases/features/namespaces/import-case2.xsd
 xmlschema/tests/test_cases/features/namespaces/import-case3.xsd
+xmlschema/tests/test_cases/features/namespaces/import-case4-1.xml
+xmlschema/tests/test_cases/features/namespaces/import-case4-2.xml
+xmlschema/tests/test_cases/features/namespaces/import-case4a.xsd
+xmlschema/tests/test_cases/features/namespaces/import-case4b.xsd
 xmlschema/tests/test_cases/features/namespaces/include-case1.xsd
 xmlschema/tests/test_cases/features/namespaces/include-case1bis.xsd
 xmlschema/tests/test_cases/features/namespaces/include-case2.xsd
@@ -168,6 +173,7 @@ xmlschema/tests/test_cases/issues/issue_105/issue_105.xsd
 xmlschema/tests/test_cases/issues/issue_111/issue_111.xsd
 xmlschema/tests/test_cases/issues/issue_111/issue_111_skeleton.xsd
 xmlschema/tests/test_cases/issues/issue_115/Rotation.xsd
+xmlschema/tests/test_cases/resources/dummy file #2.txt
 xmlschema/tests/test_cases/resources/dummy file.txt
 xmlschema/tests/test_cases/resources/external_entity.xml
 xmlschema/tests/test_cases/resources/malformed.xml
@@ -210,7 +216,6 @@ xmlschema/validators/xsdbase.py
 xmlschema/validators/schemas/XMLSchema-hasFacetAndProperty_minimal.xsd
 xmlschema/validators/schemas/XMLSchema-instance_minimal.xsd
 xmlschema/validators/schemas/XMLSchema-versioning_minimal.xsd
-xmlschema/validators/schemas/puppet.xsd
 xmlschema/validators/schemas/xhtml1-strict.xsd
 xmlschema/validators/schemas/xlink.xsd
 xmlschema/validators/schemas/xml_minimal.xsd
